@@ -6,7 +6,7 @@ from config import BOT_TOKEN
 
 from keyboards import main_keyboard, again_keyboard
 from database import create_user, get_user, update_user
-
+from handlers import router
 
 async def main():
 
@@ -15,7 +15,7 @@ async def main():
     )
 
     dp = Dispatcher()
-
+dp.include_router(router)
 
     @dp.message()
     async def test(message):
