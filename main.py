@@ -15,7 +15,7 @@ async def main():
     )
 
     dp = Dispatcher()
-dp.include_router(router)
+    dp.include_router(router)
 
     @dp.message()
     async def test(message):
